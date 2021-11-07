@@ -136,6 +136,39 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # STATIC_URL = "/static/"
 # STATIC_ROOT = BASE_DIR / "staticfiles"
 
+
+####
+# STATIC_ROOT  =   os.path.join(BASE_DIR, 'staticfiles')
+# STATIC_TMP = os.path.join(BASE_DIR, 'static')
+# STATIC_URL = '/static/'
+
+# os.makedirs(STATIC_TMP, exist_ok=True)
+# os.makedirs(STATIC_ROOT, exist_ok=True)
+
+# # MEDIA_URL = "/media/"
+# # MEDIA_ROOT = BASE_DIR/ "mediafiles"
+
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
+# MEDIA_TMP = os.path.join(BASE_DIR, 'media')
+# MEDIA_URL = '/media/'
+
+# os.makedirs(MEDIA_TMP, exist_ok=True)
+# os.makedirs(MEDIA_ROOT, exist_ok=True)
+
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, 'static'),
+#     os.path.join(BASE_DIR, 'media')
+# ]
+
+
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+######
+
+# django_heroku.settings(locals())
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
 STATIC_ROOT  =   os.path.join(BASE_DIR, 'staticfiles')
 STATIC_TMP = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
@@ -143,23 +176,10 @@ STATIC_URL = '/static/'
 os.makedirs(STATIC_TMP, exist_ok=True)
 os.makedirs(STATIC_ROOT, exist_ok=True)
 
-# MEDIA_URL = "/media/"
-# MEDIA_ROOT = BASE_DIR/ "mediafiles"
-
-MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
-MEDIA_TMP = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = '/media/'
-
-os.makedirs(MEDIA_TMP, exist_ok=True)
-os.makedirs(MEDIA_ROOT, exist_ok=True)
-
-STATICFILES_DIRS = [
+# Extra lookup directories for collectstatic to find static files
+STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
-    os.path.join(BASE_DIR, 'media')
-]
+)
 
-
+# #  Add configuration for static files storage using whitenoise
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
-
-
-# django_heroku.settings(locals())
