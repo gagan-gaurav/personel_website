@@ -1,1 +1,1 @@
-web: gunicorn personel_website.wsgi --log-file -
+web: gunicorn personel_website.wsgi
