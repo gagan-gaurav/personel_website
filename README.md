@@ -4,4 +4,4 @@ To make this website i used Django framework, Python, JavaScript, HTML, CSS, Boo
 
 It is currently hosted on heroku web hosting platform.
 
-* ignore the spelling mistake personal -> personel in the project files. just too lazy to fix it wink
+* ignore the spelling mistake personal -> personel in the project files. just too lazy to fix it ;)
