@@ -26,6 +26,7 @@ SECRET_KEY = 'django-insecure-qf)0mqh(rtwii9ndt((*qqf&6v)-zo$b6@-e5q5vutbc48t*4o
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
+# DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'iamgagan.herokuapp.com']
 
@@ -132,26 +133,26 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 ####
-STATIC_ROOT  =   os.path.join(BASE_DIR, 'staticfiles')
-STATIC_TMP = os.path.join(BASE_DIR, 'static')
-STATIC_URL = '/static/'
+# STATIC_ROOT  =   os.path.join(BASE_DIR, 'staticfiles')
+# STATIC_TMP = os.path.join(BASE_DIR, 'static')
+STATIC_URL = '/staticfiles/'
 
-os.makedirs(STATIC_TMP, exist_ok=True)
-os.makedirs(STATIC_ROOT, exist_ok=True)
+# os.makedirs(STATIC_TMP, exist_ok=True)
+# os.makedirs(STATIC_ROOT, exist_ok=True)
 
 # MEDIA_URL = "/media/"
 # MEDIA_ROOT = BASE_DIR/ "mediafiles"
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
-MEDIA_TMP = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = '/media/'
+# MEDIA_TMP = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/mediafiles/'
 
-os.makedirs(MEDIA_TMP, exist_ok=True)
+# os.makedirs(MEDIA_TMP, exist_ok=True) 
 os.makedirs(MEDIA_ROOT, exist_ok=True)
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-    os.path.join(BASE_DIR, 'media')
+    os.path.join(BASE_DIR, 'staticfiles'),
+    os.path.join(BASE_DIR, 'mediafiles')
 ]
 
 
