@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.contrib import messages
+from main.serializers import PortfolioSerializer
+from rest_framework import viewsets
 from .models import (
 		UserProfile,
 		Blog,
@@ -68,3 +70,11 @@ class BlogView(generic.ListView):
 class BlogDetailView(generic.DetailView):
 	model = Blog
 	template_name = "main/blog-detail.html"
+
+
+
+##APIS
+
+class PortfolioViewSet(viewsets.ModelViewSet):
+   queryset = Portfolio.objects.all()
+   serializer_class = PortfolioSerializer

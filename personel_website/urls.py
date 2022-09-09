@@ -25,10 +25,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls', namespace = "main")),
 
-    ## API
-    path('api/user/', apiUserDetails, name = 'apiUserDetails'),
-    path('api/portfolio/', apiPortfolioDetails, name = 'apiPortfolioDetails'),
-
     re_path(r'^mediafiles/(?P<path>.*)$', serve,{'document_root': settings.MEDIA_ROOT}), 
     re_path(r'^staticfiles/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}), 
 ]
